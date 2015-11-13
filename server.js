@@ -1,5 +1,7 @@
 // Creates a small node server that can be used to execute POSTed scripts.
 // Used to benchmark iothub against NodeJS in execution speed.
+// TODO: Add a way to stop executing scripts if they take too long, maybe:
+// https://github.com/tjanczuk/tripwire
 
 function requestHandler(req, res) {
   	res.writeHead(200, {'Content-Type': 'application/json'});
@@ -18,10 +20,6 @@ function requestHandler(req, res) {
 	        	res.end('Error occurred: ' + e.message);
 	        }
 	    });
-
-	    setTimeout(function () {
-	    	res.end('Execution timed out.');
-	    }, 3);
 	} else {
 		res.end('Not supported method: ' + req.method);
 	}
