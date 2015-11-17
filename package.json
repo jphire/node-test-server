@@ -1,0 +1,20 @@
+{
+  "name": "node-test-server",
+  "version": "1.0.0",
+  "description": "NodeJS test server for executing mobile code scripts",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jphire/node-test-server.git"
+  },
+  "author": "Janne Laukkanen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jphire/node-test-server/issues"
+  },
+  "homepage": "https://github.com/jphire/node-test-server"
+}
