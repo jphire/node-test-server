@@ -15,6 +15,7 @@ function requestHandler(req, res) {
 
 	    req.on('end', function () {
 	        try {
+			console.log('Executing');
 	        	res.end(eval(scriptCode));
 	        } catch (e) {
 	        	res.end('Error occurred: ' + e.message);
